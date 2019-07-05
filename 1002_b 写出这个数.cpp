@@ -21,7 +21,7 @@ int main() {
 		sum /= 10;
 	}
 	for(int i = j - 1; i >= 0; i--){
-		printf("%c", yin[res[i]]);
+		printf("%s", yin[res[i]]);
 		if(i != 0) printf(" ");
 		else  printf("\n");
 	}

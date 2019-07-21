@@ -13,22 +13,21 @@ int toNum(int num[]) {
 bool cmp(int a, int b) {
 	return a > b;
 }
-int toArray(int n) {
+void toArray(int n) {
 	int j = 0;
-	while(n) {
+	while(j < 4) {
 		ans[j++] = n % 10;
 		n /= 10;
 	}
-	return j;
 }
 int main() {
 	int n, max, min;
 	scanf("%d", &n);
 	do{
-		int j = toArray(n);
-		sort(ans, ans + j);
+		toArray(n);
+		sort(ans, ans + 4);
 		min = toNum(ans);
-		sort(ans, ans + j, cmp);
+		sort(ans, ans + 4, cmp);
 		max = toNum(ans);
 		n = max - min;
 		printf("%04d - %04d = %04d\n", max, min, n);

@@ -13,20 +13,28 @@ bool isPrime(int n) {
 	return true;
 } 
 
-int main(){
-    int l,k;
-    scanf("%d %d", &l, &k);
-    getchar();
-    string s;//注意string和char使用上的差别 
-    cin >> s;
-    for(int i = 0; i <= l - k; i++){
-        string str = s.substr(i,k);
-        int temp = stoi(str);
-        if(isPrime(temp)){
-            cout << str;
-            return 0;
-        }
-    }
-    cout << "404";
-    return 0;
+int main() {
+	int l, k,flag = -1;
+	char n[1010];
+	scanf("%d %d", &l, &k);
+	getchar();
+	cin.getline(n,1010);
+	for(int i = 0; i <= l - k; i++) {
+		int sum = 0;
+		for(int j = i; j < i + k; j++) {
+			sum = sum * 10 + n[j] - '0';
+		}
+		if(isPrime(sum) == true) {
+			flag = i;
+			break;
+		} 
+	}
+	if(flag >= 0) {
+		for(int i = flag; i < flag + k; i++) {
+			printf("%d", n[i] - '0');
+		}
+	}else {
+		
+		printf("404");
+	}
 }

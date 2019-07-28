@@ -5,7 +5,8 @@ using namespace std;
 const int maxn = 500010;
 const int maxs = 51;
 set<int> st[maxs];
-void compare(int c, int t) {	//放出来，不然会超限，太多循环嵌套 
+
+void compare(int c, int t) {
 	int Nc = 0;
 	int Nt = st[t].size();
 	for(set<int>::iterator it = st[c].begin(); it != st[c].end(); it++) {
@@ -14,6 +15,20 @@ void compare(int c, int t) {	//放出来，不然会超限，太多循环嵌套
 	}
 	printf("%.1f%%\n", Nc * 100.0 / Nt);
 }
+/*
+void compare(int c, int t) {
+		for(set<int>::iterator it = st[c].begin(); it != st[c].end(); it++) {
+			st[0].insert(*it);
+		}
+		for(set<int>::iterator it = st[t].begin(); it != st[t].end(); it++) {
+			st[0].insert(*it);
+		}
+		int Nc = st[t].size() + st[c].size() - st[0].size();
+		int Nt = st[0].size();
+		printf("%.1f%%\n", Nc * 100.0 / Nt);
+		st[0].clear();
+}
+*/
 int main() {
 	int n, m, k;
 	scanf("%d", &n);

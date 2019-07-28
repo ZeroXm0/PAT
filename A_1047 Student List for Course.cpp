@@ -5,8 +5,8 @@
  using namespace std;
  const int M = 40010;
  const int N = 2510;
- vector<int> theCourse[M];
- char name[N][5];
+ vector<int> theCourse[N];
+ char name[M][5];
  bool cmp (int a, int b) {
  	return strcmp(name[a], name[b]) < 0;
  }

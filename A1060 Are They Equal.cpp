@@ -19,7 +19,7 @@ standara change(string a) {
 	bool flag = 0;
 	while(a.length() > 0 && a[0] == '0') a.erase(a.begin());
 	if(a[0] == '.'){
-		flag = 1;		//标记小数点 ，删除小数点后的前导0 
+		flag = 1;		//标记小数点 ，删除小数点后的前导0 ，每删除一个小数点后0 指数-1 
 		a.erase(a.begin());
 		while(a.length() > 0 && a[0] == '0'){
 			a.erase(a.begin());

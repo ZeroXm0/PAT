@@ -28,7 +28,7 @@ int main() {
 		p = node[p].next;
 		count++;
 	}
-	if(count == 0) printf("0 -1\n");
+	if(count == 0) printf("0 -");
 	else {
 		sort(node, node + maxn, cmp);
 		printf("%d %05d\n", count, node[0].add);

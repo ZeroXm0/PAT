@@ -38,7 +38,7 @@ int main() {
 	char str[5];
 	stack<int> s;
 	for(int i = 0; i < 2 * n; i++) {
-		scanf("%s", str);
+		scanf("%s", str);			//¾¡Á¿±ğÓÃcin 
 		if(strcmp(str, "Pop") == 0) {
 			in[inum++] = s.top();
 			s.pop(); 

@@ -43,8 +43,11 @@ void DFS(int v) {
 			int id = tempPath[i];
 			if(weight[id] > 0)	remain += weight[id];
 			else {
-				need += abs(weight[id]) - remain;
-				remain = 0;
+				if(remain > abs(weight[id]))	remain -= abs(weight[id]);
+				else {
+					need += abs(weight[id]) - remain;
+					remain = 0;
+				}
 			}
 		}
 		if(need < minNeed) {
@@ -77,7 +80,8 @@ int main() {
 	DFS(sp);
 	printf("%d ", minNeed);
 	for(int i = path.size() - 1; i >= 0; i--) {
-		printf("%d->", path[i]);
+		printf("%d", path[i]);
+		if(i != 0)	printf("->");
 	}
 	printf(" %d", minRemain);
 	return 0;

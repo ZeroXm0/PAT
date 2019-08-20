@@ -32,8 +32,8 @@ int main() {
 		scanf("%d", &node[i]);
 	}
 	showTree(1);
-	int flag = node[1] > node[2] ? 1 : 0;
-	for(int i = 1; i <= n / 2; i++) {
+	int flag = node[1] > node[2] ? 1 : 0;			//3÷÷◊¥Ã¨£¨œ»‘§≈– 
+	for(int i = 1; i <= n / 2; i++) { 
 		if(flag && (node[i] < node[i * 2] || ( i * 2 + 1 <= n && node[i] < node[i * 2 + 1])) ) {
 			flag = -1;
 			break;

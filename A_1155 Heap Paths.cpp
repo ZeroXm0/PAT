@@ -5,7 +5,7 @@ using namespace std;
 const int maxn = 1010;
 int n, node[maxn];
 vector<int> temp;
-void showTree(int v) {
+void showTree(int v) {			//深度优先算法，从右子树到左子树以此存储 
 	int left = 2 * v, right = left + 1;
 	if(left > n) {
 		printf("%d", node[1]);

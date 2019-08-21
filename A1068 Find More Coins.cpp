@@ -5,7 +5,7 @@ using namespace std;
 const int maxn = 10010;
 const int maxc = 110;
 int coin[maxn], d[maxn] = {0};
-bool choice[maxn][maxc], flag[maxn] = {false};
+bool choice[maxn][maxc], flag[maxn];
 bool cmp(int a, int b) {
 	return a > b;
 }
@@ -26,7 +26,7 @@ int main() {
 			}
 		}
 	}
-	if(d[m] != m) printf("No Solution\n");
+	if(d[m] != m) printf("No Solution");
 	else {
 		int k = n, num = 0, v = m;
 		while(k >= 0) {
@@ -34,6 +34,8 @@ int main() {
 				flag[k] = true;
 				v -= coin[k];
 				num++;
+			} else {
+				flag[k] = false;
 			}
 			k--;
 		}

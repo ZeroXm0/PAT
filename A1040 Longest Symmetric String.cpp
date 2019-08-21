@@ -7,7 +7,7 @@ const int maxn = 1010;
 int main() {
 	int dp[maxn][maxn];
 	char str[maxn];
-	cin.getline(str, 1010);
+	cin.getline(str, maxn);
 	memset(dp, 0, sizeof(dp));
 	int len = strlen(str);
 	int ans = 1;

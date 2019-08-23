@@ -23,7 +23,7 @@ int peekMedian() {
 	int l = 1, r = maxn, mid, k = (st.size() + 1) / 2;
 	while(l < r) {
 		mid = (l + r) / 2;
-		// 等于的情况其实就是mid 个，所以下一步在[l, mif]找，此时L实际上就=mid + 1,如果大于的话就不已经退出循环，如果放在下面则跳过了mid 
+		// 等于的情况其实就是mid 个，所以下一步在[l, mid]找，如果大于的话就不已经退出循环，如果放在下面则跳过了mid 
 		if(getSum(mid) >= k) r = mid;
 		else l = mid + 1;
 	}

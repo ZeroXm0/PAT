@@ -12,7 +12,7 @@ bool cmp(node a, node b) {
 }
 int main() {
 	int n, k, ans[10010];
-	cin >> n >> k;		//数组过大，用vector 
+	cin >> n >> k;
 	for(int i = 0; i < n; i++)
 		cin >> stu[i].name >> stu[i].height;
 	sort(stu, stu + n, cmp);

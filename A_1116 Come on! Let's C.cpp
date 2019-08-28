@@ -31,12 +31,11 @@ int main() {
 		int query;
 		scanf("%d", &query);
 		printf("%04d: ", query);
-		if(flag[query]) {
-			printf("Checked\n");
-		}else if(ranklist[query] == 0) {
+		if(ranklist[query] == 0) {
 			printf("Are you kidding?\n");
-			flag[query] = true;
-		} else {
+		}else if(flag[query]) {
+			printf("Checked\n");
+		}else{
 			print(query);
 		}
 	}

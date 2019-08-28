@@ -28,7 +28,6 @@ int main() {
 			} else {
 				q.insert(now);
 			}
-			printf("%d  ", G[pre][now]);
 			pre = now;
 			if(j == num - 1) last = now;
 		}

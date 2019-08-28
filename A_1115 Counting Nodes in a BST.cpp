@@ -25,7 +25,6 @@ void DFS(Node *root, int lever) {
 	if(root == NULL) {
 		if(lever > deep) {
 			deep = lever;
-			printf("%d", deep);
 		}
 		return;
 	}

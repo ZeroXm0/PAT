@@ -16,8 +16,8 @@ int main() {
 				if(abs(i - j) == abs(queen[i] - queen[j])) flag = false;
 			}
 		}
-		if(flag) printf("Yes\n");
-		else printf("No\n");
+		if(flag) printf("YES\n");
+		else printf("NO\n");
 	}
 	return 0;
 } 

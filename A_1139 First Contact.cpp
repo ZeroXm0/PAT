@@ -34,6 +34,7 @@ int main() {
 	int cnt = 1;
 	for(int i = 1; i <= m; i++) {
 		string f1, f2;
+		//-0000和0000对于int来说都是0，将无法得知这个人的性别，也就会影响他找他的同性朋友，所以考虑用字符串接收，因为题目中已经表示会以符号位加四位的方式给出输入，所以只要判断字符串是否大小相等，如果大小相等说明这两个人是同性
 		cin >> f1 >> f2;
 		if(f1.length() == f2.length()) {
 			v[abs(strToInt(f1))].push_back(abs(strToInt(f2)));

@@ -31,7 +31,6 @@ int main() {
 			int v1,v2;
 			v1 = vec[i].v1;
 			v2 = vec[i].v2;
-			printf("%d %d ", v1, v2);
 			if(color[v1] == color[v2]) {
 				flag = false;
 				break;

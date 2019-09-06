@@ -25,7 +25,7 @@ int main() {
 				if(duration[j][i] > 0) reciver++;
 			}
 		}
-		if(caller > k && reciver * 5 <= caller)) {
+		if(caller > k && reciver * 5 <= caller) {
 			bool flag = true;
 			for(int j = 0;  j < sus.size(); j++) {
 				if(duration[sus[j]][i] && duration[i][sus[j]]) {
@@ -44,7 +44,7 @@ int main() {
 	}
 	if(sus.empty()) printf("None\n");
 	else {
-		for(int i = 1; i <= ans; i++) {			//	本就是从小到大循环的，不用再排序 
+		for(int i = 1; i < ans; i++) {			//	本就是从小到大循环的，不用再排序 
 			for(int j = 0; j < res[i].size(); j++) {
 				if(j != 0) printf(" ");
 				printf("%d", res[i][j]);

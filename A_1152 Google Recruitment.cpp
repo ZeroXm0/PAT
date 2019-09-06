@@ -3,7 +3,6 @@
 #include <cstring>
 #include <cmath>
 using namespace std;
-
 bool isPrime(int n) {
 	if(n <= 1) return false;
 	int sqr = (int)sqrt(1.0 * n);
@@ -12,7 +11,6 @@ bool isPrime(int n) {
 	}
 	return true;
 } 
-
 int main() {
 	int l, k,flag = -1;
 	char n[1010];
@@ -34,7 +32,6 @@ int main() {
 			printf("%d", n[i] - '0');
 		}
 	}else {
-		
 		printf("404");
 	}
 }
